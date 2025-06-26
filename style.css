@@ -1,0 +1,241 @@
+* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 1s ease-in;
+}
+
+/* TOPO */
+header.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.sobre-mim {
+  flex: 1;
+  max-width: 60%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: white;
+}
+
+.sobre-mim h1,
+.titulo-digitando {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #e63946;
+}
+
+.titulo-digitando {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #e63946;
+  animation: digitaTexto 3s steps(20, end) forwards;
+}
+
+.foto-perfil-container {
+  flex-shrink: 0;
+  max-width: 300px;
+}
+
+.foto-perfil {
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid #e63946;
+  box-shadow: 0 0 15px #e63946aa;
+}
+
+/* HABILIDADES */
+.habilidades {
+  margin: 40px 20px;
+}
+
+.habilidades h2 {
+  margin-bottom: 15px;
+  color: #e63946;
+  font-size: 2rem;
+}
+
+.scroll-habilidades {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #e63946 #333;
+}
+
+.scroll-habilidades::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-habilidades::-webkit-scrollbar-thumb {
+  background-color: #e63946;
+  border-radius: 4px;
+}
+.scroll-habilidades::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+.habilidade {
+  background-color: #1f1f1f;
+  border: 2px solid #e63946;
+  padding: 15px 25px;
+  border-radius: 25px;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  cursor: default;
+  user-select: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidade:hover,
+.habilidade:focus {
+  background-color: #e63946;
+  color: #121212;
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #e63946;
+  outline: none;
+}
+
+/* CURSOS */
+.cursos {
+  margin: 40px 20px;
+}
+.cursos h2 {
+  margin-bottom: 20px;
+  color: #e63946;
+  font-size: 2rem;
+}
+.scroll-cursos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.curso {
+  background-color: #1f1f1f;
+  border: 2px solid #e63946;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 5px #e63946aa;
+}
+.curso h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.descricao-curso {
+  font-size: 0.95rem;
+  color: #ccc;
+  display: none;
+  margin-top: 10px;
+}
+.curso.ativo .descricao-curso {
+  display: block;
+}
+.curso:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px #e63946;
+}
+
+/* PROJETOS */
+.projetos {
+  margin: 40px 20px;
+}
+.projetos h2 {
+  color: #e63946;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.cards-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background-color: #1f1f1f;
+  border: 2px solid #e63946;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 5px #e63946aa;
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #e63946;
+}
+.card h3 {
+  color: #e63946;
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* FOOTER */
+footer {
+  background-color: #121212;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+.footer-links {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.icone {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.icone:hover {
+  color: #e63946;
+}
+.copy {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes digitaTexto {
+  from { width: 0; }
+  to { width: 100%; }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="foto,favicon.png" type="image/x-icon">
+  <title>Gabriel Batista — Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function mostrarDescricao(el) {
+      el.classList.toggle("ativo");
+    }
+  </script>
+</head>
+<body>
+  <header class="topo">
+    <div class="sobre-mim">
+      <h1 class="titulo-digitando">Gabriel Batista, Analista Júnior</h1>
+      <p>
+        Sou Gabriel Batista, estudante de Gestão da Tecnologia da Informação e aspirante a desenvolvedor Full Stack. Tenho uma paixão imensa por transformar ideias em soluções digitais eficazes.  
+        Com conhecimento sólido em linguagens como Java, JavaScript, HTML e CSS, busco sempre aprimorar minhas habilidades tanto no front-end quanto no back-end.  
+        Sou uma pessoa dedicada, focada no aprendizado contínuo e empenhada em entregar projetos de alta qualidade.
+      </p>
+    </div>
+    <div class="foto-perfil-container">
+      <img src="foto perfil comercial].jfif" alt="Foto de Gabriel Batista" class="foto-perfil" />
+    </div>
+  </header>
+
+  <section class="habilidades">
+    <h2>Minhas Habilidades</h2>
+    <div class="scroll-habilidades" tabindex="0" aria-label="Habilidades rolando horizontalmente">
+      <div class="habilidade">HTML5</div>
+      <div class="habilidade">CSS3</div>
+      <div class="habilidade">JavaScript</div>
+      <div class="habilidade">Bootstrap</div>
+      <div class="habilidade">React</div>
+      <div class="habilidade">Java</div>
+      <div class="habilidade">MySQL</div>
+      <div class="habilidade">PHP</div>
+      <div class="habilidade">Node.js</div>
+      <div class="habilidade">Git & GitHub</div>
+      <div class="habilidade">VS Code</div>
+      <div class="habilidade">Figma</div>
+      <div class="habilidade">Postman</div>
+      <div class="habilidade">Comunicação</div>
+      <div class="habilidade">Trabalho em equipe</div>
+      <div class="habilidade">Resolução de problemas</div>
+      <div class="habilidade">Aprendizado contínuo</div>
+    </div>
+  </section>
+
+  <section class="cursos">
+    <h2>Cursos</h2>
+    <div class="scroll-cursos">
+      <div class="curso" tabindex="0" onclick="mostrarDescricao(this)">
+        <h3>Algoritmo — Curso em Vídeo</h3>
+        <p class="descricao-curso">Aprendi lógica de programação, fluxogramas e estruturas condicionais.</p>
+      </div>
+      <div class="curso" tabindex="0" onclick="mostrarDescricao(this)">
+        <h3>JavaScript — Curso em Vídeo</h3>
+        <p class="descricao-curso">Dominei eventos, DOM, funções e interações no navegador.</p>
+      </div>
+      <div class="curso" tabindex="0" onclick="mostrarDescricao(this)">
+        <h3>Java — Curso Completo</h3>
+        <p class="descricao-curso">Aprendi POO, controle de fluxo, coleções e conexão com banco de dados.</p>
+      </div>
+      <div class="curso" tabindex="0" onclick="mostrarDescricao(this)">
+        <h3>MySQL — Plataforma Renomada</h3>
+        <p class="descricao-curso">Conhecimentos em comandos SQL, modelagem e consultas complexas.</p>
+      </div>
+      <div class="curso" tabindex="0" onclick="mostrarDescricao(this)">
+        <h3>HTML & CSS — Curso em Vídeo</h3>
+        <p class="descricao-curso">Fundamentos da web, semântica, responsividade e estilos modernos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projetos">
+    <h2>Projetos</h2>
+    <div class="cards-container">
+      <div class="card projeto" tabindex="0">
+        <h3>Sistema de Gestão de Clientes</h3>
+        <p>Aplicação para cadastro e gerenciamento de clientes, com front-end responsivo e back-end em Java.</p>
+      </div>
+      <div class="card projeto" tabindex="0">
+        <h3>API Back-end para Vendas</h3>
+        <p>API RESTful para sistema de vendas, com autenticação e controle de estoque.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/devgabbatista" target="_blank" class="icone">GitHub</a>
+      <a href="mailto:gabbatistas18@gmail.com" class="icone">E-mail</a>
+      <a href="https://linkedin.com/in/gbrielbatista-ti" target="_blank" class="icone">LinkedIn</a>
+    </div>
+    <p class="copy">©️ 2025 Gabriel Batista</p>
+  </footer>
+</body>
+</html>
